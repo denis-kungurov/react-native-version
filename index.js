@@ -186,6 +186,10 @@ function version(program, projectPath) {
 			programOpts.neverIncrementBuild = true;
 		}
 	}
+	
+	if (programOpts.versionBuild) {
+		programOpts.setBuild = appPkg.version;
+	}
 
 	var appJSON;
 	const appJSONPath = path.join(projPath, "app.json");
