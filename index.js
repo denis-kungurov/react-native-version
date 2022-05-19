@@ -180,6 +180,12 @@ function version(program, projectPath) {
 
 		process.exit(1);
 	}
+	
+	if (programOpts.neverIncrementPrerelease) {
+		if (semver.prerelease(appPkg.version)) {
+			programOpts.neverIncrementBuild = true;
+		}
+	}
 
 	var appJSON;
 	const appJSONPath = path.join(projPath, "app.json");
