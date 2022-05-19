@@ -53,6 +53,10 @@ program
 		'Only version specified platforms, e.g. "--target android,ios".',
 		list
 	)
+	.option(
+		"--never-increment-prerelease",
+		"Detect prerelease version to use --never-increment-build on android"
+	)
 	.parse(process.argv);
 
 rnv.version(program);
