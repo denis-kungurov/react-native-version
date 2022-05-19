@@ -57,6 +57,7 @@ program
 		"--never-increment-prerelease",
 		"Detect prerelease version to use --never-increment-build on android"
 	)
+	.option("--version-build", "Set version to build number ")
 	.parse(process.argv);
 
 rnv.version(program);
